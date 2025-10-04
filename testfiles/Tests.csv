@@ -1,0 +1,39 @@
+Test,Description,Input,Output
+1.1,"Covariance Missing data, skip missing rows",test1.csv,testout_1.1.csv
+1.2,"Correlation Missing data, skip missing rows",test1.csv,testout_1.2.csv
+1.3,"Covariance Missing data, Pairwise",test1.csv,testout_1.3.csv
+1.4,"Correlation Missing data, pairwise",test1.csv,testout_1.4.csv
+2.1,"EW Covariance, lambda=0.97",test2.csv,testout_2.1.csv
+2.2,"EW Correlation, lambd=0.94",test2.csv,testout_2.2.csv
+2.3,"Covariance with EW Variance (l=0.97), EW Correlation (l=0.94)",test2.csv,testout_2.3.csv
+3.1,near_psd covariance,testout_1.3.csv,testout_3.1.csv
+3.2,near_psd correlation,testout_1.4.csv,testout_3.2.csv
+3.3,Higham covariance,testout_1.3.csv,testout_3.3.csv
+3.4,Higham correlation,testout_1.4.csv,testout_3.4.csv
+4.1,chol_psd,testout_3.1.csv,testout_4.1.csv
+5.1,"Normal Simulation PD Input 0 mean - 100,000 simulations, compare input vs output covariance",test5_1.csv,testout_5.1.csv
+5.2,"Normal Simulation PSD Input 0 mean - 100,000 simulations, compare input vs output covariance",test5_2.csv,testout_5.2.csv
+5.3,"Normal Simulation nonPSD Input, 0 mean, near_psd fix - 100,000 simulations, compare input vs output covariance",test5_3.csv,testout_5.3.csv
+5.4,"Normal Simulation PSD Input, 0 mean, higham fix - 100,000 simulations, compare input vs output covariance",test5_3.csv,testout_5.4.csv
+5.5,"PCA Simulation, 99% explained, 0 mean - 100,000 simulations compare input vs output covariance",test5_2.csv,testout_5.5.csv
+6.1,calculate arithmetic returns,test6.csv,testout_6.1.csv
+6.2,calculate log returns,test6.csv,testout_6.2.csv
+7.1,Fit Normal Distribution,test7_1.csv,testout_7.1.csv
+7.2,Fit T Distribution,test7_2.csv,testout_7.2.csv
+7.3,T Regression,test7_3.csv,testout_7.3.csv
+8.1,Var from Normal Distribution,test7_1.csv,testout_8.1.csv
+8.2,Var from T Distribution,test7_2.csv,testout_8.2.csv
+8.3,VaR from Simulation -- compare to 8.2 values,test7_2.csv,testout_8.3.csv
+8.4,ES From Normal Distribution,test7_1.csv,testout_8.4.csv
+8.5,ES from T Distribution,test7_2.csv,testout_8.5.csv
+8.6,ES from Simulation -- compare to 8.5 values,test7_2.csv,testout_8.6.csv
+9.1,VaR/ES on 2 levels from simulated values - Copula,"test9_1_portfolio.csv, test9_1_returns.csv",testout_9.1.csv
+10.1,"Risk Parity, Normal Assumption",test5_2.csv,testout_10.1.csv
+10.2,"Risk Parity, Normal Assumption, 1/2 risk weight on X5",test5_2.csv,testout_10.2.csv
+10.3,"Max Sharpe Ratio, normal assumption, w>0","test5_2.csv,test10_3_means.csv, rf=0.04",testout_10.3.csv
+10.4,"Max Sharpe Ratio, normal assumption, 0.1 <= w <= 0.5","test5_2.csv,test10_3_means.csv, rf=0.04",testout_10.4.csv
+11.1,Expost Attribution,"test11_1_returns.csv, test11_1_weights.csv",testout_11.1.csv
+11.2,Expost Attribution to Factors,"test11_2_factor_returns.csv, test11_2_stock_returns.csv, test11_2_beta.csv,test_11_2_weights.csv",testout_11.2.csv
+12.1,European Options GBSM including Greeks,test12_1.csv,testout_12.1.csv
+12.2,American Options with continuous Dividends including Greeks,test12_1.csv,testout_12.2.csv
+12.3,American Options with discreet Dividends ,test12_3.csv,testout_12.3.csv
